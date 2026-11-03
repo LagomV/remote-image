@@ -113,7 +113,7 @@ def install(migrate_legacy: bool = False) -> dict:
             raise RuntimeError("已安装的全局规则片段丢失，请先检查，避免重复安装。")
         new_text = text + (newline * 2 if text else "") + block + newline
     files: dict[str, bytes] = {}
-    for relative in [Path("SKILL.md"), Path("README.md"), Path("install.ps1"), *sorted((ROOT / "agents").rglob("*.yaml")),
+    for relative in [Path("SKILL.md"), Path("README.md"), Path("LICENSE"), Path("install.ps1"), *sorted((ROOT / "agents").rglob("*.yaml")),
                      *sorted((ROOT / "references").rglob("*.md")), *sorted((ROOT / "scripts").glob("*.py")),
                      *sorted((ROOT / "tests").glob("*.py"))]:
         source = relative if relative.is_absolute() else ROOT / relative
