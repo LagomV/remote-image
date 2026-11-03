@@ -1,0 +1,6 @@
+interface:
+  display_name: "中转站生图"
+  short_description: "配置图片中转站、按需选择 AI 生图渠道，支持本机加密保存密钥"
+  default_prompt: "使用 $remote-image 配置中转站，或选择渠道完成 AI 生图；数据图表不触发。"
+policy:
+  allow_implicit_invocation: true
